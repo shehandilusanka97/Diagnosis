@@ -10,10 +10,10 @@ import {
 import React, { useEffect } from "react";
 import Questions from "../components/Questions";
 import { ForParents2 } from "../Data";
-// import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 const ForParentsQue = () => {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   useEffect(() => {
     LogBox.ignoreLogs([
       "VirtualizedLists should never be nested",
@@ -57,19 +57,21 @@ const ForParentsQue = () => {
       <View style={{ flexDirection: "row", justifyContent:"space-evenly" }}>
         <TouchableOpacity
           style={styles.button}
-          // onPress={() => navigation.navigate("ForParentsQue1")}
+          onPress={() => navigation.navigate("ForParentsQue1")}
         >
           <Text style={[styles.btnText, { letterSpacing: 0 }]}>PREVIOUS</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[styles.button,{width:'10%',borderRadius:20,backgroundColor:'#fe7f2d'}]}
+          onPress={() => navigation.navigate("HomeScreen")}
         >
           <Ionicons name="md-home" size={19} color="white" />
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[styles.button, { backgroundColor: "#38b000" }]}
+          onPress={() => navigation.navigate("HomeScreen")}
         >
             {/* ForTeachersQue1 */}
           <Text style={styles.btnText}>SUBMIT</Text>

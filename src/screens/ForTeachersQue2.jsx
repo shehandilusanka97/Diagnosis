@@ -30,7 +30,7 @@ import {
     };
   
     return (
-      <View style={{ height: "100%" }}>
+      <View style={{ height: "100%",backgroundColor:"#fff" }}>
         <Text style={styles.headingText}>Behavioral Analysis</Text>
         <Text
           style={[
@@ -71,19 +71,21 @@ import {
         <View style={{ flexDirection: "row", justifyContent:"space-evenly" }}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate("ForParentsQue1")}
+            onPress={() => navigation.navigate("ForTeachersQue1")}
           >
             <Text style={[styles.btnText, { letterSpacing: 0 }]}>PREVIOUS</Text>
           </TouchableOpacity>
   
           <TouchableOpacity
             style={[styles.button,{width:'10%',borderRadius:20,backgroundColor:'#fe7f2d'}]}
+            onPress={() => navigation.navigate("HomeScreen")}
           >
             <Ionicons name="md-home" size={19} color="white" />
           </TouchableOpacity>
   
           <TouchableOpacity
             style={[styles.button, { backgroundColor: "#38b000" }]}
+            onPress={() => navigation.navigate("HomeScreen")}
           >
               {/* ForTeachersQue1 */}
             <Text style={styles.btnText}>SUBMIT</Text>

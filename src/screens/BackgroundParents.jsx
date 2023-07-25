@@ -54,14 +54,15 @@ import {
           }
         </ScrollView>
         <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button}
+            onPress={() => navigation.navigate("HomeScreen")}>
             <Text style={styles.btnText}>HOME</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.button, { backgroundColor: "#38b000" }]}
-            onPress={() => navigation.navigate("ForParentsQue2")}
+            onPress={() => navigation.navigate("HomeScreen")}
           >
-            <Text style={styles.btnText}>NEXT</Text>
+            <Text style={styles.btnText}>SUBMIT</Text>
           </TouchableOpacity>
         </View>
       </View>

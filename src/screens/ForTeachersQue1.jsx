@@ -57,7 +57,9 @@ import {
           }
         </ScrollView>
         <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button}
+        
+        onPress={() => navigation.navigate("HomeScreen")}>
           <Text style={styles.btnText}>HOME</Text>
         </TouchableOpacity>
         <TouchableOpacity
